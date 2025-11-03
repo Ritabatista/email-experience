@@ -1,499 +1,266 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesso Exclusivo - The Best Experience 2025</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-            color: #ffffff;
-            line-height: 1.8;
-            padding: 40px 20px;
-        }
-        
-        .email-wrapper {
-            max-width: 650px;
-            margin: 0 auto;
-            background: #ffffff;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(255, 173, 0, 0.15);
-        }
-        
-        .container {
-            background: #ffffff;
-            color: #000000;
-        }
-        
-        .banner {
-            width: 100%;
-            height: 400px;
-            background-image: url('https://email-editor-production.s3.amazonaws.com/images/690553/Banner%2002.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-        
-        .banner::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(to bottom, transparent, #ffffff);
-        }
-        
-        .content {
-            padding: 60px 50px;
-        }
-        
-        .accent-line {
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(90deg, #ffad00, #ffd700);
-            margin: 0 auto 50px;
-        }
-        
-        .intro {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .intro-title {
-            font-size: 14px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #ffad00;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        
-        .intro-headline {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1.3;
-            color: #000000;
-            margin-bottom: 25px;
-        }
-        
-        .intro-text {
-            font-size: 17px;
-            color: #666666;
-            max-width: 500px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-        
-        .deadline-box {
-            background: #000000;
-            color: #ffffff;
-            padding: 50px;
-            margin: 50px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .deadline-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #ffad00, #ffd700);
-        }
-        
-        .deadline-date {
-            font-size: 16px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #ffad00;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-        
-        .deadline-items {
-            list-style: none;
-            margin: 30px 0;
-        }
-        
-        .deadline-item {
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(255, 173, 0, 0.2);
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .deadline-item:last-child {
-            border-bottom: none;
-        }
-        
-        .item-icon {
-            width: 24px;
-            height: 24px;
-            background: #ffad00;
-            color: #000000;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-        
-        .message-section {
-            text-align: center;
-            padding: 60px 0;
-        }
-        
-        .message-highlight {
-            font-size: 28px;
-            font-weight: 700;
-            color: #000000;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-        
-        .message-text {
-            font-size: 18px;
-            color: #666666;
-            line-height: 1.8;
-        }
-        
-        .message-accent {
-            color: #ffad00;
-            font-weight: 600;
-        }
-        
-        .cta-container {
-            text-align: center;
-            margin: 60px 0;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #ffad00, #ffd700);
-            color: #000000;
-            text-decoration: none;
-            padding: 22px 60px;
-            font-size: 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border: 3px solid transparent;
-            box-shadow: 0 10px 30px rgba(255, 173, 0, 0.3);
-        }
-        
-        .urgency-note {
-            text-align: center;
-            font-size: 15px;
-            color: #999999;
-            margin-top: 30px;
-            font-style: italic;
-        }
-        
-        .footer-section {
-            background: #000000;
-            color: #ffffff;
-            padding: 60px 50px;
-            text-align: center;
-        }
-        
-        .footer-message {
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            color: #cccccc;
-        }
-        
-        .footer-signature {
-            font-size: 17px;
-            font-weight: 600;
-            color: #ffad00;
-            letter-spacing: 1px;
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 20px 10px;
-            }
-            
-            .email-wrapper {
-                box-shadow: 0 10px 30px rgba(255, 173, 0, 0.1);
-            }
-            
-            .banner {
-                height: 280px;
-            }
-            
-            .content {
-                padding: 40px 30px;
-            }
-            
-            .accent-line {
-                width: 60px;
-                margin-bottom: 40px;
-            }
-            
-            .intro-title {
-                font-size: 12px;
-                letter-spacing: 3px;
-            }
-            
-            .intro-headline {
-                font-size: 30px;
-            }
-            
-            .intro-text {
-                font-size: 16px;
-            }
-            
-            .deadline-box {
-                padding: 40px 30px;
-                margin: 40px 0;
-            }
-            
-            .deadline-date {
-                font-size: 14px;
-                letter-spacing: 2px;
-            }
-            
-            .deadline-item {
-                font-size: 15px;
-                padding: 18px 0;
-            }
-            
-            .item-icon {
-                width: 20px;
-                height: 20px;
-                font-size: 14px;
-                margin-right: 15px;
-            }
-            
-            .message-section {
-                padding: 50px 0;
-            }
-            
-            .message-highlight {
-                font-size: 24px;
-            }
-            
-            .message-text {
-                font-size: 16px;
-            }
-            
-            .cta-container {
-                margin: 50px 0;
-            }
-            
-            .cta-button {
-                padding: 20px 45px;
-                font-size: 13px;
-                letter-spacing: 1.5px;
-                width: 100%;
-                max-width: 320px;
-            }
-            
-            .urgency-note {
-                font-size: 14px;
-                padding: 0 20px;
-            }
-            
-            .footer-section {
-                padding: 50px 30px;
-            }
-            
-            .footer-message {
-                font-size: 15px;
-            }
-            
-            .footer-signature {
-                font-size: 16px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            body {
-                padding: 15px 5px;
-            }
-            
-            .banner {
-                height: 220px;
-            }
-            
-            .content {
-                padding: 35px 20px;
-            }
-            
-            .accent-line {
-                width: 50px;
-                height: 2px;
-                margin-bottom: 35px;
-            }
-            
-            .intro {
-                margin-bottom: 50px;
-            }
-            
-            .intro-title {
-                font-size: 11px;
-                letter-spacing: 2px;
-            }
-            
-            .intro-headline {
-                font-size: 26px;
-                margin-bottom: 20px;
-            }
-            
-            .intro-text {
-                font-size: 15px;
-            }
-            
-            .deadline-box {
-                padding: 30px 20px;
-                margin: 35px 0;
-            }
-            
-            .deadline-date {
-                font-size: 13px;
-                letter-spacing: 2px;
-                margin-bottom: 25px;
-            }
-            
-            .deadline-item {
-                font-size: 14px;
-                padding: 15px 0;
-            }
-            
-            .item-icon {
-                width: 18px;
-                height: 18px;
-                font-size: 12px;
-                margin-right: 12px;
-            }
-            
-            .message-section {
-                padding: 40px 0;
-            }
-            
-            .message-highlight {
-                font-size: 22px;
-                margin-bottom: 15px;
-            }
-            
-            .message-text {
-                font-size: 15px;
-                line-height: 1.7;
-            }
-            
-            .cta-container {
-                margin: 40px 0;
-            }
-            
-            .cta-button {
-                padding: 18px 35px;
-                font-size: 12px;
-                letter-spacing: 1px;
-                width: 100%;
-            }
-            
-            .urgency-note {
-                font-size: 13px;
-                margin-top: 25px;
-                line-height: 1.6;
-            }
-            
-            .footer-section {
-                padding: 40px 20px;
-            }
-            
-            .footer-message {
-                font-size: 14px;
-                line-height: 1.7;
-            }
-            
-            .footer-signature {
-                font-size: 15px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acesso Exclusivo - The Best Experience 2025</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.8;
+      padding: 40px 20px;
+    }
+
+    .email-wrapper {
+      max-width: 650px;
+      margin: 0 auto;
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .banner {
+      width: 100%;
+      height: 380px;
+      background-image: url('https://email-editor-production.s3.amazonaws.com/images/690553/Banner%2002.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .content {
+      padding: 50px 40px;
+    }
+
+    .accent-line {
+      width: 80px;
+      height: 3px;
+      background: #ffad00;
+      margin: 0 auto 40px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .intro-title {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #ffad00;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .intro-headline {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .intro-text {
+      font-size: 16px;
+      color: #555555;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .deadline-box {
+      background: #f8f8f8;
+      color: #000000;
+      padding: 40px;
+      margin: 40px 0;
+      border: 1px solid #eee;
+    }
+
+    .deadline-date {
+      font-size: 15px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ffad00;
+      margin-bottom: 25px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .deadline-items {
+      list-style: none;
+      margin: 0;
+    }
+
+    .deadline-item {
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .deadline-item:last-child {
+      border-bottom: none;
+    }
+
+    .item-icon {
+      width: 22px;
+      height: 22px;
+      background: #ffad00;
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .message-section {
+      text-align: center;
+      padding: 40px 0 10px;
+    }
+
+    .message-highlight {
+      font-size: 26px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    .message-text {
+      font-size: 17px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .message-accent {
+      color: #ffad00;
+      font-weight: 600;
+    }
+
+    .cta-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #ffad00;
+      color: #000;
+      text-decoration: none;
+      padding: 18px 50px;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-radius: 4px;
+      border: none;
+      box-shadow: none;
+      transition: background 0.2s ease-in-out;
+    }
+
+    .cta-button:hover {
+      background: #e69c00;
+    }
+
+    .urgency-note {
+      text-align: center;
+      font-size: 15px;
+      color: #888;
+      margin-top: 20px;
+      font-style: italic;
+    }
+
+    .footer-section {
+      background: #f8f8f8;
+      color: #000;
+      padding: 40px 30px;
+      text-align: center;
+      border-top: 1px solid #eee;
+    }
+
+    .footer-message {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .footer-signature {
+      font-size: 17px;
+      font-weight: 600;
+      color: #ffad00;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 30px 20px;
+      }
+      .intro-headline {
+        font-size: 26px;
+      }
+      .cta-button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="email-wrapper">
-        <div class="container">
-            <div class="banner"></div>
-            
-            <div class="content">
-                <div class="accent-line"></div>
-                
-                <div class="intro">
-                    <div class="intro-title">Acesso Exclusivo</div>
-                    <h1 class="intro-headline">Sua última chance em 2025</h1>
-                    <p class="intro-text">
-                        As melhores condições do ano encerram em 5 de novembro. Depois disso, não voltam mais.
-                    </p>
-                </div>
-                
-                <div class="deadline-box">
-                    <div class="deadline-date">Após 5 de Novembro</div>
-                    
-                    <ul class="deadline-items">
-                        <li class="deadline-item">
-                            <span class="item-icon">×</span>
-                            <span>Acesso antecipado nas principais praças do Brasil fecha definitivamente</span>
-                        </li>
-                        <li class="deadline-item">
-                            <span class="item-icon">×</span>
-                            <span>Condições especiais de lançamento voltam ao valor normal</span>
-                        </li>
-                        <li class="deadline-item">
-                            <span class="item-icon">×</span>
-                            <span>Oportunidade de entrada nos melhores mercados se encerra</span>
-                        </li>
-                        <li class="deadline-item">
-                            <span class="item-icon">×</span>
-                            <span>Grupo seleto de fundadores fecha permanentemente</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="message-section">
-                    <p class="message-highlight">
-                        Não é pressão de venda.<br>
-                        É o momento certo de agir.
-                    </p>
-                    <p class="message-text">
-                        Quem constrói resultados sólidos age quando a oportunidade aparece.<br>
-                        <span class="message-accent">Esta é sua única oportunidade em 2025.</span>
-                    </p>
-                </div>
-                
-                <div class="cta-container">
-                    <a href="https://www.sympla.com.br/evento/the-best-experience-2025/3066498" class="cta-button">Garantir minha vaga agora</a>
-                    <p class="urgency-note">Vagas limitadas • Última chamada até 05/11</p>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <p class="footer-message">
-                    Grandes oportunidades não esperam pela hora perfeita.
-                </p>
-                <p class="footer-signature">
-                    EQUIPE THE BEST
-                </p>
-            </div>
-        </div>
+  <div class="email-wrapper">
+    <div class="banner"></div>
+
+    <div class="content">
+      <div class="accent-line"></div>
+
+      <div class="intro">
+        <div class="intro-title">Acesso Exclusivo</div>
+        <h1 class="intro-headline">Sua última chance em 2025</h1>
+        <p class="intro-text">
+          As melhores condições do ano encerram em 5 de novembro. Depois disso, não voltam mais.
+        </p>
+      </div>
+
+      <div class="deadline-box">
+        <div class="deadline-date">Após 5 de Novembro</div>
+        <ul class="deadline-items">
+          <li class="deadline-item"><span class="item-icon">×</span> Acesso antecipado nas principais praças do Brasil fecha definitivamente</li>
+          <li class="deadline-item"><span class="item-icon">×</span> Condições especiais de lançamento voltam ao valor normal</li>
+          <li class="deadline-item"><span class="item-icon">×</span> Oportunidade de entrada nos melhores mercados se encerra</li>
+          <li class="deadline-item"><span class="item-icon">×</span> Grupo seleto de fundadores fecha permanentemente</li>
+        </ul>
+      </div>
+
+      <div class="message-section">
+        <p class="message-highlight">Não é pressão de venda.<br>É o momento certo de agir.</p>
+        <p class="message-text">
+          Quem constrói resultados sólidos age quando a oportunidade aparece.<br>
+          <span class="message-accent">Esta é sua única oportunidade em 2025.</span>
+        </p>
+      </div>
+
+      <div class="cta-container">
+        <a href="https://www.sympla.com.br/evento/the-best-experience-2025/3066498" class="cta-button">Garantir minha vaga agora</a>
+        <p class="urgency-note">Vagas limitadas • Última chamada até 05/11</p>
+      </div>
     </div>
+
+    <div class="footer-section">
+      <p class="footer-message">Grandes oportunidades não esperam pela hora perfeita.</p>
+      <p class="footer-signature">EQUIPE THE BEST</p>
+    </div>
+  </div>
 </body>
 </html>
