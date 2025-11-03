@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Última Chance - The Best</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: #ffffff;
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+        
+        .email-wrapper {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #ffffff;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(255, 173, 0, 0.15);
+        }
+        
+        .container {
+            background: #ffffff;
+            color: #000000;
+        }
+        
+        .banner {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://email-editor-production.s3.amazonaws.com/images/690553/Banner%2002.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .banner::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, #ffffff);
+        }
+        
+        .content {
+            padding: 60px 50px;
+        }
+        
+        .accent-line {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #ffad00, #ffd700);
+            margin: 0 auto 50px;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .intro-title {
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #ffad00;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .intro-headline {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #000000;
+            margin-bottom: 25px;
+        }
+        
+        .intro-text {
+            font-size: 17px;
+            color: #666666;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .deadline-box {
+            background: #000000;
+            color: #ffffff;
+            padding: 50px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .deadline-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ffad00, #ffd700);
+        }
+        
+        .deadline-date {
+            font-size: 16px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ffad00;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .deadline-items {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .deadline-item {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 173, 0, 0.2);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .deadline-item:hover {
+            padding-left: 10px;
+            border-color: #ffad00;
+        }
+        
+        .deadline-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-icon {
+            width: 24px;
+            height: 24px;
+            background: #ffad00;
+            color: #000000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .message-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .message-highlight {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        .message-text {
+            font-size: 18px;
+            color: #666666;
+            line-height: 1.8;
+        }
+        
+        .message-accent {
+            color: #ffad00;
+            font-weight: 600;
+        }
+        
+        .cta-container {
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffad00, #ffd700);
+            color: #000000;
+            text-decoration: none;
+            padding: 22px 60px;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+            box-shadow: 0 10px 30px rgba(255, 173, 0, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #000000;
+            color: #ffad00;
+            border: 3px solid #ffad00;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 173, 0, 0.4);
+        }
+        
+        .urgency-note {
+            text-align: center;
+            font-size: 15px;
+            color: #999999;
+            margin-top: 30px;
+            font-style: italic;
+        }
+        
+        .footer-section {
+            background: #000000;
+            color: #ffffff;
+            padding: 60px 50px;
+            text-align: center;
+        }
+        
+        .footer-message {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #cccccc;
+        }
+        
+        .footer-signature {
+            font-size: 17px;
+            font-weight: 600;
+            color: #ffad00;
+            letter-spacing: 1px;
+        }
+        
+        .decorative-dots {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin: 40px 0 30px;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #ffad00;
+            border-radius: 50%;
+            animation: pulse 2s infinite ease-in-out;
+        }
+        
+        .dot:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        
+        .dot:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+            
+            .banner {
+                height: 250px;
+            }
+            
+            .content {
+                padding: 40px 25px;
+            }
+            
+            .intro-headline {
+                font-size: 28px;
+            }
+            
+            .deadline-box {
+                padding: 35px 25px;
+            }
+            
+            .message-highlight {
+                font-size: 22px;
+            }
+            
+            .cta-button {
+                padding: 18px 40px;
+                font-size: 13px;
+            }
+            
+            .footer-section {
+                padding: 40px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-wrapper">
+        <div class="container">
+            <div class="banner"></div>
+            
+            <div class="content">
+                <div class="accent-line"></div>
+                
+                <div class="intro">
+                    <div class="intro-title">Última Oportunidade</div>
+                    <h1 class="intro-headline">O tempo está acabando</h1>
+                    <p class="intro-text">
+                        Esta é a sua última chance de garantir condições que não voltarão em 2025.
+                    </p>
+                </div>
+                
+                <div class="deadline-box">
+                    <div class="deadline-date">Após 5 de Novembro</div>
+                    
+                    <ul class="deadline-items">
+                        <li class="deadline-item">
+                            <span class="item-icon">×</span>
+                            <span>40 descontos exclusivos desaparecem para sempre</span>
+                        </li>
+                        <li class="deadline-item">
+                            <span class="item-icon">×</span>
+                            <span>Praças estratégicas voltam ao bloqueio total</span>
+                        </li>
+                        <li class="deadline-item">
+                            <span class="item-icon">×</span>
+                            <span>Condições facilitadas deixam de existir</span>
+                        </li>
+                        <li class="deadline-item">
+                            <span class="item-icon">×</span>
+                            <span>A janela de oportunidade se fecha definitivamente</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="message-section">
+                    <p class="message-highlight">
+                        Não é exagero.<br>
+                        É a realidade.
+                    </p>
+                    <p class="message-text">
+                        Se você estava aguardando o momento perfeito,<br>
+                        <span class="message-accent">este é o único que você terá.</span>
+                    </p>
+                </div>
+                
+                <div class="cta-container">
+                    <a href="https://www.sympla.com.br/evento/the-best-experience-2025/2808842" class="cta-button">Garantir minha vaga agora</a>
+                    <p class="urgency-note">Vagas limitadas • Prazo final se aproximando</p>
+                </div>
+                
+                <div class="decorative-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <p class="footer-message">
+                    Esta oportunidade não espera por ninguém.
+                </p>
+                <p class="footer-signature">
+                    EQUIPE THE BEST
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
